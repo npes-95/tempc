@@ -1,4 +1,4 @@
-# tempc
+# tempc ![Rust](https://github.com/npes-95/tempc/workflows/Rust/badge.svg)
 A command line temperature converter written in Rust.
 
 # Usage
