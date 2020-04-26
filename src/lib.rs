@@ -5,8 +5,8 @@ pub mod cfg;
 
 pub fn run(config: cfg::Config) -> Result<(), Box<dyn Error>> {
 
-    if config.is_valid() {
-        let input_temp = temperature::Temperature::new(config.user_data())?;
+    if config.input_data_ok() {
+        let input_temp = temperature::Temperature::new(config.input_data())?;
 
         let (output_temp_1, output_temp_2) = match input_temp.unit() {
             temperature::Unit::Kelvin => (input_temp.to_fahrenheit(), input_temp.to_celcius()),
