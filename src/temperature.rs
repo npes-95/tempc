@@ -1,4 +1,4 @@
-//TODO: implement display trait
+use std::fmt;
 
 const ABSOLUTE_ZERO_K: f32 = 0.;
 const ABSOLUTE_ZERO_C: f32 = ABSOLUTE_ZERO_K - 273.15;
@@ -99,6 +99,14 @@ impl Temperature {
             Unit::Kelvin => t >= ABSOLUTE_ZERO_K,
         }
     }
+}
+
+impl fmt::Display for Temperature {
+    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
+        write!(f, "{}", self.to_string())
+    }
+
+
 }
 
 impl PartialEq for Temperature {

@@ -14,7 +14,7 @@ pub fn run(config: cfg::Config) -> Result<(), Box<dyn Error>> {
             temperature::Unit::Fahrenheit => (input_temp.to_kelvin(), input_temp.to_celcius()),
         };
 
-        println!("{} {}", output_temp_1.to_string(), output_temp_2.to_string());
+        println!("{} {}", output_temp_1, output_temp_2);
     }
 
     Ok(())
